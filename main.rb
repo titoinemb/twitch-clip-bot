@@ -122,7 +122,7 @@ begin
     # ------------------- !tc command -------------------
     if msg[:text].start_with?('!tc') && msg[:user].downcase == BOT_NAME.downcase
       clip_url = create_clip(broadcaster_id, BOT_OAUTH)
-      irc_send(socket, "PRIVMSG ##{CHANNEL} :@3826931623126312639182321 Voici ton clip : #{clip_url}")
+      irc_send(socket, "PRIVMSG ##{CHANNEL} :@ Voici ton clip : #{clip_url}")
 
       after_cmd = msg[:text].sub('!tc', '').strip
       irc_send(socket, "PRIVMSG ##{CHANNEL} :#{after_cmd}") unless after_cmd.empty?
