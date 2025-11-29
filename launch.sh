@@ -10,15 +10,15 @@ if [[ ! -f "main.rb" ]]; then
   exit 1
 fi
 
-# Première instance → channel NinhaYeslife
-#ruby main.rb --channel NinhaYeslife &
+# Première instance → channel 
+#ruby main.rb --channel  &
 #PID1=$!
 
-# Deuxième instance → channel Akaruu
-ruby main.rb --channel Akaruu #&
+# Deuxième instance → channel 
+ruby main.rb --channel  #&
 #PID2=$!
 
-#echo "Instances démarrées : PID $PID1 (NinhaYeslife) et PID $PID2 (Akaruu)"
+#echo "Instances démarrées : PID $PID1 () et PID $PID2 ()"
 
 # Optionnel : attendre que les deux processus se terminent
 #wait $PID1 $PID2
